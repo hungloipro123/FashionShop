@@ -55,69 +55,86 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="cart-table">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th class="p-name">Tên sản phẩm</th>
-                                            <th>Giá tiền</th>
-                                            <th>Số lượng</th>
-                                            <th>Tổng tiền</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <c:forEach items="${listCart}" var="c">
+                                <c:if test="${empty listCart}">
+                                    <table border="1" class="cart-table" >
+                                        <thead>
                                             <tr>
-                                                <td class="p-price first-row">${c.product_id}</td>
-                                                <td class="cart-title first-row">
-                                                    <h5>${c.product_name}</h5>
-                                                </td>
-                                                <td class="p-price first-row">${c.product_price}đ</td>
-                                                <td class="qua-col first-row">
-                                                    <div class="quantity">                                                
-                                                        <form action="update-cart">
-                                                            <input class="form-control form-control-sm" onchange="this.form.submit()" type="number" name="quantity" value="${c.quantity}">
-                                                            <input type="hidden" name="productId" value="${c.product_id}"/>
-                                                            <input type="hidden" name="cartId" value="${c.cart_id}"/>
-                                                        </form>
-                                                    </div>
-                                                </td>
-                                                <td class="total-price first-row">${c.total_cost}đ</td>
-                                                <td class="close-td first-row">
-                                                    <a href="delete-cart?productId=${c.product_id}&userId=${c.user_id}" class="btn-outline-danger text-decoration-none">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </td>
+                                                <th>ID</th>
+                                                <th>Product Name</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>Total Cost</th>
                                             </tr>
-                                        </c:forEach>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-
-                                    <!--                                    <div class="discount-coupon">
-                                                                            <h6>Mã giảm giá</h6>
-                                                                            <form action="#" class="coupon-form">
-                                                                                <input type="text" placeholder="Nhập mã">
-                                                                                <button type="submit" class="site-btn coupon-btn">Apply</button>
-                                                                            </form>
-                                                                        </div>-->
-                                </div>
-                                <div class="col-lg-4 offset-lg-4">
-                                    <div class="proceed-checkout">
-                                        <ul>
-                                            <li class="cart-total">Tổng tiền các sản phẩm <span>${sum}đ</span></li>
-                                        </ul>
-                                        <div class="proceed-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-
-                                            <a href="cart-contact" style="color: white">Mua hàng</a>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;justify-content: center;">
+                                        <div style="background: black; width: 50px;">
+                                            <img style="width: 100%" src="images/empty-cart.png">
                                         </div>
+                                        <p class="emtyC">Your shopping cart is empty now. Please add product to view product packaging!</p>
+                                        <button style="background-color: #ee4d2d;border: none;border-radius: 5px;width: 150px;height: 40px;"><span style="color:white;">BUY NOW</span></button>
+                                    </div>
+                                </c:if>
+                                <c:if test="${not empty listCart}">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th class="p-name">Tên sản phẩm</th>
+                                                <th>Giá tiền</th>
+                                                <th>Số lượng</th>
+                                                <th>Tổng tiền</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${listCart}" var="c">
+                                                <tr>
+                                                    <td class="p-price first-row">${c.product_id}</td>
+                                                    <td class="cart-title first-row">
+                                                        <h5>${c.product_name}</h5>
+                                                    </td>
+                                                    <td class="p-price first-row">${c.product_price}đ</td>
+                                                    <td class="qua-col first-row">
+                                                        <div class="quantity">                                                
+                                                            <form action="update-cart">
+                                                                <input class="form-control form-control-sm" onchange="this.form.submit()" type="number" name="quantity" value="${c.quantity}">
+                                                                <input type="hidden" name="productId" value="${c.product_id}"/>
+                                                                <input type="hidden" name="cartId" value="${c.cart_id}"/>
+                                                            </form>
+                                                        </div>
+                                                    </td>
+                                                    <td class="total-price first-row">${c.total_cost}đ</td>
+                                                    <td class="close-td first-row">
+                                                        <a href="delete-cart?productId=${c.product_id}&userId=${c.user_id}" class="btn-outline-danger text-decoration-none">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
 
                                     </div>
+                                    <div class="col-lg-4 offset-lg-4">
+                                        <div class="proceed-checkout">
+                                            <ul>
+                                                <li class="cart-total">Tổng tiền các sản phẩm <span>${sum}đ</span></li>
+                                            </ul>
+                                            <div class="proceed-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+
+                                                <a href="cart-contact" style="color: white">Mua hàng</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </c:if>
                         </div>
                     </div>
                 </div>
@@ -139,3 +156,12 @@
 
     </html>
 </html>
+
+
+<!--                                    <div class="discount-coupon">
+                                        <h6>Mã giảm giá</h6>
+                                        <form action="#" class="coupon-form">
+                                            <input type="text" placeholder="Nhập mã">
+                                            <button type="submit" class="site-btn coupon-btn">Apply</button>
+                                        </form>
+                                    </div>-->

@@ -25,7 +25,8 @@ public class EditUserProfileController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+            processRequest(request, response);
+            System.out.println("Xin Chao mọi người");
     }
 
     @Override

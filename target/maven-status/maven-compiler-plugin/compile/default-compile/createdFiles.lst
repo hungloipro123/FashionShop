@@ -2,18 +2,23 @@ Controlller\Marketing\CustomerListController.class
 Controlller\Marketing\ChangeStatusFeedbackController.class
 dao\CategoryDAO.class
 model\TypeSetting$TypeSettingBuilder.class
+dao\OrderDao.class
 Controller\Common\AdminAuthorization.class
+Controlller\Marketing\SliderListController.class
 Controller\Admin\SettingDetailsController.class
 Controller\Public\CartContactController.class
 Controlller\Marketing\AddCustomerController.class
 model\Setting$SettingBuilder.class
+Controller\Common\EditUP.class
 model\CategoryBlog$CategoryBlogBuilder.class
 Controller\Common\SaleAuthorization.class
 model\User.class
 Controller\Sale\UpdateOrderController.class
 Controller\Common\LogoutController.class
 Controller\Public\BlogDetailController.class
+Controlller\Marketing\CustomerDetailController.class
 Controller\Admin\AddSettingController.class
+com\vnpay\common\Config.class
 dao\RoleDAO.class
 Controlller\Marketing\AddSliderController.class
 dao\OrderDetailDAO.class
@@ -23,6 +28,7 @@ model\Blog.class
 Controlller\Marketing\MKTDashboardController.class
 Controller\Admin\CreateUserController.class
 model\Customer$CustomerBuilder.class
+Controlller\Marketing\UpdateFalseSlider.class
 model\UpdateCustomer$UpdateCustomerBuilder.class
 Controller\Customer\MyOrderController.class
 dao\ProductDAO.class
@@ -71,6 +77,7 @@ Controller\Common\LoginController.class
 model\Order$OrderBuilder.class
 model\Customer.class
 Controller\Admin\UpdateSettingController.class
+dao\DateDAO.class
 Controlller\Marketing\PostsListController.class
 Controlller\Marketing\UpdateProductController.class
 Controller\Public\SuccessfulCheckoutController.class
@@ -97,6 +104,7 @@ dao\SettingDAO.class
 Controller\Admin\ListUserController.class
 model\Category$CategoryBuilder.class
 Controller\Public\HomeController.class
+Controlller\Marketing\FeedbackDetailController.class
 context\DBContext.class
 Controller\Public\AddToOrderController.class
 Controller\Sale\SaleDashboardController.class
@@ -111,3 +119,4 @@ Controlller\Marketing\UpdatePostController.class
 Controller\Admin\SettingListController.class
 model\User$UserBuilder.class
 Controller\Sale\OrderListSale.class
+Controller\Common\EditUserProfileController.class
