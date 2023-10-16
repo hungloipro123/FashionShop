@@ -158,7 +158,12 @@
                 <div class="card-header bg-white">
                     <div class="media flex-sm-row flex-column-reverse justify-content-between  ">
                         <div class="col my-auto"> <h4 class="mb-0" style="display: flex; justify-content: center">Thanks for your orders</h4> </div>
-                        <div class="col-auto text-center  my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3"  src="https://salt.tikicdn.com/ts/product%2F73%2F31%2F8f%2F0d2df2f2799036d45c6ed06b946d361e.png" width="115" height="115"> <p class="mb-4 pt-0 Glasses">Fashion For Everyone</p>  </div>
+                        <div class="col-auto text-center  my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3"  src="assets/img/logo1.png" width="115" height="115"> 
+                            
+                            <br>
+                              <br>
+                           
+                            <p class="mb-4 pt-0 Glasses">Fashion For The Youth</p>  </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -177,9 +182,9 @@
                                                 <div class="row  my-auto flex-column flex-md-row">
                                                     <div class="col my-auto"> <small class="mb-0">${s.product_name}</small>  </div>
                                                     <div class="col-auto my-auto"> <h6 class="mb-0">${s.category_name}</h6></div>
-                                                    <div class="col my-auto"> <h6 class="mb-0">Giá: ${s.product_price}</h6></div>
-                                                    <div class="col my-auto"> <h6 class="mb-0">Số lượng: ${s.quantity}</h6></div>
-                                                    <div class="col my-auto"> <h6 class="mb-0">Tổng chi phí: ${s.product_price*s.quantity}</h6></div> 
+                                                    <div class="col my-auto"> <h6 class="mb-0">Price ${s.product_price}</h6></div>
+                                                    <div class="col my-auto"> <h6 class="mb-0">Quantity: ${s.quantity}</h6></div>
+                                                    <div class="col my-auto"> <h6 class="mb-0">Total cost: ${s.product_price*s.quantity}</h6></div> 
 
                                                 </div>
                                             </div>
@@ -187,8 +192,8 @@
                                         <hr class="my-3 ">
                                         <div class="row">
                                             <div>
-                                                <a href="list-detail?productId=${s.product_id}&categoryId=${s.category_id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="width: 49%">Đánh giá</a>
-                                                <a href="addcart?productId=${s.product_id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 49%">Mua lại</a>
+                                                <a href="list-detail?productId=${s.product_id}&categoryId=${s.category_id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="width: 49%">Feedback</a>
+                                                <a href="addcart?productId=${s.product_id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 49%">Re-purchase</a>
                                             </div>
 
                                         </div>
@@ -204,41 +209,41 @@
                         <div class="row mt-4">
                             <div class="col">
                                 <div class="row justify-content-between">
-                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize"> <b>Thông tin</b></p> </div>
-                                    <div class="flex-sm-col col-auto"><p class="mb-1 cus-fontsize">Người nhận</p></div>
+                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize"> <b>Information</b></p> </div>
+                                    <div class="flex-sm-col col-auto"><p class="mb-1 cus-fontsize">Recipient</p></div>
                                 </div>
                                 <div class="row justify-content-between">
                                     <div class="col-auto"><p class="mb-1 text-dark cus-fontsize"><b>Order Details</b></p></div>
-                                    <div class="flex-sm-col text-right col cus"> <p class="mb-1 cus-fontsize me-2"><b>Họ tên</b></p> </div>
+                                    <div class="flex-sm-col text-right col cus"> <p class="mb-1 cus-fontsize me-2"><b>Full name</b></p> </div>
                                     <div class="flex-sm-col col-auto"> <p class="mb-1 cus-fontsize">${k.fullName}</p> </div>
                                 </div>
                                 <div class="row justify-content-between">
-                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize"> <b>Số điện thoại</b></p> </div>
+                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize"> <b>Phone</b></p> </div>
                                     <div class="flex-sm-col col-auto"><p class="mb-1 cus-fontsize">${k.mobile}</p></div>
                                 </div>
                                 
                                 <div class="row justify-content-between">
-                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize me-5"><b>Địa chỉ</b></p></div>
+                                    <div class="flex-sm-col text-right col"><p class="mb-1 cus-fontsize me-5"><b>Address</b></p></div>
                                     <div class="flex-sm-col col-auto"><p class="mb-1 cus-fontsize">${k.address}</p></div>
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="row invoice ">
-                            <div class="col"><p class="mb-1 cus-fontsize"> OrderId: ${k.orderID}</p><p class="mb-1 cus-fontsize">Ngày mua hàng : ${k.date}</p></div>
+                            <div class="col"><p class="mb-1 cus-fontsize"> OrderId: ${k.orderID}</p><p class="mb-1 cus-fontsize">Purchase date : ${k.date}</p></div>
                         </div>
                     </div>
                     <div class="card-footer">
                         <div class="jumbotron-fluid">
                             <div class="row justify-content-between ">
-                                <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="https://salt.tikicdn.com/ts/product%2F73%2F31%2F8f%2F0d2df2f2799036d45c6ed06b946d361e.png" width="115" height="115"></div>
+                                <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="assets/img/logo1.png" width="115" height="115"></div>
                                 <div class="col-auto my-auto "><h2 class="mb-0 font-weight-bold">TOTAL PAID</h2></div>
                                 <div class="col-auto my-auto ml-auto"><h1 class="display-3 ">${k.total_cost}đ</h1></div>
                             </div>
                             <div class="row mb-3 mt-3 mt-md-0">
-                                <div class="col-auto border-line"> <small class="text-white">Cảm ơn vì</small></div>
-                                <div class="col-auto border-line"> <small class="text-white">đã ủng hộ</small></div>
-                                <div class="col-auto "><small class="text-white">Chúng tôi<3 </small> </div>
+                                <div class="col-auto border-line"> <small class="text-white">Thank you</small></div>
+                                <div class="col-auto border-line"> <small class="text-white">for your</small></div>
+                                <div class="col-auto "><small class="text-white">support</small> </div>
                             </div>
                         </div>
                     </div>

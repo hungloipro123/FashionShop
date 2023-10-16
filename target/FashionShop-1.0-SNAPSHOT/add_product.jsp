@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="p-3 py-5">
-                                        <div class="col-md-12">Tên sản phẩm<input type="text" class="form-control"  name="name"></div>
+                                        <div class="col-md-12">Product Name<input type="text" class="form-control"  name="name"></div>
                                         <div class="col-md-12">Thông tin rút gọn<textarea class="form-control" name="brief_infor"  rows="2" ></textarea></div>
                                         <div class="col-md-12">Nội dung
 

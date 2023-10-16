@@ -62,7 +62,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Hướng dẫn thanh toán</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Payment instructions</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -93,7 +93,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Hướng dẫn thanh toán bằng video</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Video payment tutorial</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -102,7 +102,7 @@
                         <video style="max-width: 100%;" src="https://sandbox.vnpayment.vn/apis/assets/images/Gioi-thieu-CTT-VNPAY.mp4" controls></video>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -116,24 +116,24 @@
                             <img style="width: 40%;" src="images/cart-completion/checked.png">
                         </div><br>
                         <div class="col-md-12">
-                            <h3>Cảm ơn vì đã đặt hàng</h3>
+                            <h3>Thank you for your order</h3>
                         </div><br>
                         <div class="col-md-12">
-                            <h6><i>Chúng tôi sẽ gửi cho bạn một email xác nhận đơn hàng <br> với thông tin chi tiết và hướng dẫn thanh toán</i></h6>
+                            <h6><i>We will send you an order confirmation email <br> with detailed information and payment instructions.</i></h6>
                         </div><br>
                         <button type="button" class="btn btn-dark mt-3" data-toggle="modal" data-target="#exampleModalLong">
-                            Hướng dẫn thanh toán
+                            Payment instructions
                         </button>
                         <button type="button" class="btn btn-light btn-outline-dark mt-3" data-toggle="modal"
                                 data-target="#exampleModalCenter">
-                            Hướng dẫn thanh toán bằng video
+                            Video payment tutorial
                         </button>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h3 class="text-right">Hình thức thanh toán</h3>
+                            <h3 class="text-right">Payment methods</h3>
                         </div>
                         <div class="radio-buttons">
                             <div>
@@ -146,7 +146,7 @@
                                         </span>
                                         <span class="payment-method__item-icon-wrapper"><img
                                                 src="https://www.coolmate.me/images/COD.svg"></span>
-                                        <span class="payment-method__item-name">COD <br>Thanh toán khi nhận hàng
+                                        <span class="payment-method__item-name">COD <br>Cash On Delivery
                                         </span>
                                     </label>
                                     <label class="payment-method__item">
@@ -166,12 +166,11 @@
                                             <img src="https://www.coolmate.me/images/vnpay.png">
                                         </span>
                                         <span class="payment-method__item-name">
-                                            Thẻ ATM / Internet Banking<br>Thẻ tín dụng (Credit card) / Thẻ ghi nợ (Debit
-                                            card)<br>VNPay QR
+                                            ATM card / Internet Banking<br>Credit card /Debit
+                                            card<br>VNPay QR
                                         </span>
                                     </label>
-                                    <div class="mt-5 text-center"><button class="btn btn-primary" type="submit">Thanh
-                                            toán</button></div>
+                                    <div class="mt-5 text-center"><button class="btn btn-primary" type="submit">Pay</button></div>
                                 </form>
                             </div>
                         </div>

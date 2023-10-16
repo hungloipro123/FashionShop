@@ -109,10 +109,10 @@
                         <div class="col-md-2">
                             <select class="dropdown-font-new float-left" style="width: 100%" aria-label="Default select example" onchange="location = this.value;"> Sắp xếp
                                 <option value="customer-list?${historyKey}${historyStatus}&type=desc" ${type == "desc" ? "Selected" : ""}>
-                                    Mới Nhất
+                                    Newest
                                 </option>
                                 <option value="customer-list?${historyKey}${historyStatus}" ${type == null ? "Selected" : ""}>
-                                    Cũ Nhất
+                                   Oldest
                                 </option>
                                 <option value="customer-list?${historyKey}${historyStatus}&type=desc&value=customer_name" ${type == "desc" && value == "customer_name" ? "Selected" : ""}>
                                     Họ tên giảm dần

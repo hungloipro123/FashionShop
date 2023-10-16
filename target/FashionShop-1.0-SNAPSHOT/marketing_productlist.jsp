@@ -166,7 +166,7 @@
                                             <th>Mã sản phẩm</th>
                                             <th>Ảnh sản phẩm</th>
                                             <th>Danh mục sản phẩm</th>
-                                            <th>Tên sản phẩm</th>
+                                            <th>Product Name</th>
                                             <th>Giá gốc</th>
                                             <th>Gía khuyến mại</th>
                                             <th>Số lượng</th>

@@ -41,7 +41,7 @@ public class FeedbackCommonController extends HttpServlet {
 
             User u = (User) session.getAttribute("us");
             if (u == null) {
-                request.setAttribute("notification", "Bạn cần đăng nhập để gửi phản hồi cho KingsMan");
+                request.setAttribute("notification", "Bạn cần đăng nhập để gửi phản hồi cho VDreamer");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             } else {
                 int product_id = -1;

@@ -833,25 +833,26 @@
                     <!-- Product list -->
                     <h2 class="section-heading">Category</h2>
                     <div class="category-list">
-                        <a href="list?&categoryId=3"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg1.jpg')
+                        <a href="list?&categoryId=1"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/category1.jpg')
                                                           top center / cover no-repeat">
-                                <div class="category-content">Đồ mặc trong</div>
+                                <div class="category-content">T-Shirt</div>
                             </div></a>
 
-                        <a href="list?&categoryId=1"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg2.jpg')
+                        <a href="list?&categoryId=2"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/category2.jpg')
                                                           top center / cover no-repeat">
-                                <div class="category-content">Đồ mặc ngoài</div>
+                                <div class="category-content">Balo</div>
                             </div></a>
 
-                        <a href="list?&categoryId=4"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg3.jpg')
+                        <a href="list?&categoryId=3"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/category3.jpg')
                                                           top center / cover no-repeat">
-                                <div class="category-content">Phụ kiện</div>
+                                <div class="category-content">Crossbody Bag</div>
                             </div></a>
 
 
-                        <a href="list?&categoryId=2"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/categoryImg4.jpg')
+                        <a href="list?&categoryId=4"><div class="category-item category-img" style="background: url('./assets/img/categoryImg/category4.jpg')
                                                           top center / cover no-repeat">
-                                <div class="category-content">Quần</div>
+                                <div class="category-content">Accessory
+                                </div>
                             </div></a>
 
 
@@ -866,8 +867,8 @@
                 <!-- Blog -->
                 <div class="blog-section">
                     <div class="content-section">
-                        <h2 class="section-heading text-white">Chúng tôi luôn mang đến những công nghệ hiện đại nhất</h2>
-                        <p class="section-sub-heading text-white">Công nghệ Việt cho người Việt</p>
+                        <h2 class="section-heading text-white">Raising the Standard</h2>
+                        <p class="section-sub-heading text-white">Proudly Vietnamese!</p>
 
                         <!-- blog list hot -->
                         <div class="blog-list">
@@ -878,7 +879,7 @@
                                     <div class="blog-body" style="min-height: 340px">
                                         <h3 class="blog-heading" style="font-size: 40px">${c.title}</h3>
                                         <p class="blog-desc">${c.brief_infor}</p>
-                                        <a href="blogDetail?blog_id=${c.blog_id}&categoryBlog_id=${c.categoryBlog_id}" class="place-buy-btn">Tìm hiểu thêm</a>
+                                        <a href="blogDetail?blog_id=${c.blog_id}&categoryBlog_id=${c.categoryBlog_id}" class="place-buy-btn">Learn more</a>
                                     </div>
                                 </div>
                             </c:forEach>

@@ -29,6 +29,26 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="description" content="" />
             <meta name="author" content="" />
+            <style>
+               
+    .btn-hihi {
+        background-color: #ee4d2d;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 40px;
+    }
+
+    .btn-hihi a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn-hihi:hover {
+        background-color: #ff6347; /* Màu sáng hơn khi hover */
+    }
+</style>
+            </style>
             <link rel="stylesheet" href="./assets/css/style.css">
             <!-- Css Styles -->
             <link rel="stylesheet" href="do1/css/bootstrap.min.css" type="text/css">
@@ -44,6 +64,28 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
             <%@include file="components/javascript.jsp" %>
         </head>
+        <style>
+        .btn-hihi {
+            background-color: #ee4d2d;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            height: 40px;
+        }
+
+        .btn-hihi a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn-hihi:hover {
+            background-color: #ff6347; /* Màu sáng hơn khi hover */
+        }
+
+        .btn-hihi:hover span {
+            color: white; /* Màu sáng hơn cho văn bản khi hover */
+        }
+    </style>
 
         <body>
 
@@ -56,25 +98,12 @@
                         <div class="col-lg-12">
                             <div class="cart-table">
                                 <c:if test="${empty listCart}">
-                                    <table border="1" class="cart-table" >
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Product Name</th>
-                                                <th>Price</th>
-                                                <th>Quantity</th>
-                                                <th>Total Cost</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
                                     <div style="display: flex; flex-direction: column; align-items: center; text-align: center;justify-content: center;">
                                         <div style="background: black; width: 50px;">
                                             <img style="width: 100%" src="images/empty-cart.png">
                                         </div>
                                         <p class="emtyC">Your shopping cart is empty now. Please add product to view product packaging!</p>
-                                        <button style="background-color: #ee4d2d;border: none;border-radius: 5px;width: 150px;height: 40px;"><span style="color:white;">BUY NOW</span></button>
+                                        <button class="btn-hihi"><a href="/home"><span>BUY NOW</span> </a></button>
                                     </div>
                                 </c:if>
                                 <c:if test="${not empty listCart}">
@@ -82,10 +111,10 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th class="p-name">Tên sản phẩm</th>
-                                                <th>Giá tiền</th>
-                                                <th>Số lượng</th>
-                                                <th>Tổng tiền</th>
+                                                <th class="p-name">Product Name</th>
+                                                <th>Price</th>
+                                                <th>Amount</th>
+                                                <th>Total Price</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -124,11 +153,11 @@
                                     <div class="col-lg-4 offset-lg-4">
                                         <div class="proceed-checkout">
                                             <ul>
-                                                <li class="cart-total">Tổng tiền các sản phẩm <span>${sum}đ</span></li>
+                                                <li class="cart-total">Total cost of all products <span>${sum}đ</span></li>
                                             </ul>
                                             <div class="proceed-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 
-                                                <a href="cart-contact" style="color: white">Mua hàng</a>
+                                                <a href="cart-contact" style="color: white">Buy</a>
                                             </div>
 
                                         </div>
@@ -152,6 +181,9 @@
             <script src="do1/js/jquery.slicknav.js"></script>
             <script src="do1/js/owl.carousel.min.js"></script>
             <script src="do1/js/main.js"></script>
+            <script>
+                
+            </script>
         </body>
 
     </html>

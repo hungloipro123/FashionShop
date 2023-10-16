@@ -790,7 +790,7 @@
             <div class="col-md-4">
                 <form class="input-search" action="list">
                     <div>
-                        <input type="text" name="key" value="${key}" placeholder="Tìm kiếm sản phẩm..." class="filter-search__control" >
+                        <input type="text" name="key" value="${key}" placeholder="Search..." class="filter-search__control" >
                         <button type="submit" class="button-search"></button>
                     </div>
 
@@ -818,10 +818,10 @@
                         Oldest
                     </option> 
                     <option value="list?${historyKey}${historyCategoryId}&value=original_prices" ${value eq "original_prices" ? "Selected" : ""}>
-                        Giá tăng dần
+                       Low-High
                     </option>
                     <option value="list?${historyKey}${historyCategoryId}&value=original_prices&type=desc" ${value eq "original_prices" && type eq "desc" ? "Selected" : ""}>
-                        Giá giảm dần
+                     High-Low
                     </option> 
                 </select>
             </div>

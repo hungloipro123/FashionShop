@@ -218,22 +218,22 @@
                             <div class="fs-5 mb-4">
                                 <c:if test="${product.sale_price == 0 || product.sale_price == null}">
                                     <div style="margin-bottom: 1.7%">
-                                        Giá gốc: 
+                                        Original Price: 
                                         <span >${product.original_price}đ</span>
                                     </div>
                                 </c:if>
                                 <c:if test="${product.sale_price != 0}">
                                     <div style="margin-bottom: 1.7%">
-                                        Giá gốc: 
+                                       Original Price: 
                                         <span class="text-decoration-line-through">${product.original_price}đ</span>
                                     </div>
                                     <div>
-                                        Giảm giá:
+                                       Discount:
                                         <span>${product.sale_price}đ</span>
                                     </div>
                                 </c:if>
                             </div>
-                            <h6>Miêu tả ngắn gọn: </h6>
+                            <h6>Brief description: </h6>
                             <div class="mb-5">${product.brief_infor}</div>
 <!--                            <div class="pd-color">
                                 <h6>Màu sắc: </h6>
@@ -295,7 +295,7 @@
                                     <br>
                                     <div class="row">
                                  <div class="col-lg-6">
-                                    <input class="btn btn-outline-dark" type="submit" style="font-size: 20px" value="Thêm vào giỏ hàng">                                     
+                                    <input class="btn btn-outline-dark" type="submit" style="font-size: 20px" value="Add to cart">                                     
                                 </div>
                                         </div>
                         </form>
@@ -310,7 +310,7 @@
         <!-- Related items section-->
         <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
-                <h2 style="text-align: center;" class="ms-2 mb-4">Sản phẩm liên quan</h2>
+                <h2 style="text-align: center;" class="ms-2 mb-4">Related Products</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <c:forEach items="${listProduct}" var="p">
                         <div class="col mb-5">
@@ -364,7 +364,7 @@
                             <div class="form-group">
                                 <input name="imageurl" type="file" class="form-control" style="border-radius: 100px;" required="">
                             </div>
-                            <b>Đánh giá:</b>&nbsp;&nbsp;
+                            <b>Feedback:</b>&nbsp;&nbsp;
                             <div class="form-group" >
                                 <select name = "star" style="border-radius: 100px;" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option selected>Chọn số sao bạn dành cho AP Shop</option>
@@ -389,16 +389,16 @@
 
         <!-- Feedback List --> 
         <c:if test="${total == 0}">
-            <h3 style="text-align: center; font-style: oblique;">Không có bình luận</h3>
+            <h3 style="text-align: center; font-style: oblique;">No comments.</h3>
         </c:if>           
         <div style="background-color:#f8f9fa;">
             <hr class="marketing_feedback_margin">
-            <span><h2 class="marketing_feedback_margin marketing_feedbac_displayinline">${total} Đánh giá</h2></span>
+            <span><h2 class="marketing_feedback_margin marketing_feedbac_displayinline">${total} Rate</h2></span>
             <span><h2 class="marketing_feedback_margin marketing_feedbac_displayinline">${Math.round(avg * 1000) / 1000}/5 <img style="height: 40px; width: 40px" src="images/images.png"></h2></span>
                     <c:if test="${accept.orderID != null}">
                 <a data-toggle="modal" data-dismiss="modal" data-target="#feedback">
                     <h2 class="marketing_feedback_margin marketing_feedbac_displayinline" style="color: blue">
-                        Viết nhận xét của bạn
+                        Your review
                     </h2>
                 </a>
             </c:if>
@@ -427,7 +427,7 @@
 
                             <h6 class="marketing_feedback_margin mt-2">${f.feedback}
                                 <c:if test="${f.user_id == sessionScope.us.user_Id}">
-                                    <a href="delete-feedback?id=${f.id}" class="float-right btn btn-outline-danger">Xóa</a>
+                                    <a href="delete-feedback?id=${f.id}" class="float-right btn btn-outline-danger">Delete</a>
                                 </c:if>
                             </h6>
                             <h6 class="marketing_feedback_margin"><img style="height: 100px; width: 100px" src="${f.image}"></h6>

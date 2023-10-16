@@ -9,7 +9,6 @@ Controller\Admin\SettingDetailsController.class
 Controller\Public\CartContactController.class
 Controlller\Marketing\AddCustomerController.class
 model\Setting$SettingBuilder.class
-Controller\Common\EditUP.class
 model\CategoryBlog$CategoryBlogBuilder.class
 Controller\Common\SaleAuthorization.class
 model\User.class
@@ -46,6 +45,7 @@ Controller\Public\DeleteCartController.class
 Controller\Common\MKTAuthorization.class
 Controlller\Marketing\FeedbackListController.class
 model\Role.class
+Controller\Common\ChangePassword.class
 model\Chart.class
 model\Slider$SliderBuilder.class
 Controller\Customer\CancelOrderController.class
@@ -90,6 +90,7 @@ model\ChartStar.class
 model\Category.class
 model\Product$ProductBuilder.class
 model\Feedback$FeedbackBuilder.class
+Controller\Common\ResetPasswordController$1.class
 Controlller\Marketing\ProductsListController.class
 dao\BlogDAO.class
 Controller\Public\AddToCartController.class
@@ -99,6 +100,7 @@ Controller\Common\RegisterController.class
 Controller\Public\FeedbackController.class
 Controlller\Marketing\UpdateSlider.class
 model\Setting.class
+EncodeMD5\PassToMD5.class
 model\Date.class
 dao\SettingDAO.class
 Controller\Admin\ListUserController.class
@@ -115,6 +117,7 @@ model\Blog$BlogBuilder.class
 Controller\Public\ProductListController.class
 model\Cart$CartBuilder.class
 Controlller\Marketing\ChangeStatusProductController.class
+EncodeMD5\MD5.class
 Controlller\Marketing\UpdatePostController.class
 Controller\Admin\SettingListController.class
 model\User$UserBuilder.class

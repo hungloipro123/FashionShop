@@ -34,16 +34,18 @@
     </head>
     <body>
         <%@include file="components/header.jsp" %>
-        <h2 class="mtop title-order" >Danh sách các đơn hàng</h2>
+       <br>
+        <br>
+        <h1 class="mtop title-order" >List of orders</h1>
         <div class="container mtop" style="width:80%">
             <table class="table table-striped table-bordered" id="sortTable">
                 <thead>
                     <tr>
                         <th>OrderID</th>
-                        <th>Ngày&nbspmua&nbsphàng</th>
-                        <th>Sản&nbspphẩm</th>
-                        <th>Tổng&nbspchi&nbspphí</th>
-                        <th>Tình&nbsptrạng</th>
+                        <th>Purchase&nbspdate</th>
+                        <th>Products</th>
+                        <th>Total&nbspcost</th>
+                        <th>Status</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -54,7 +56,7 @@
                                     ${c.orderID}</a></td>
                             <td>${c.date}</td>
                             <c:if test="${c.countProduct != 0}">
-                                <td>${c.fullNameFirstProduct} và ${c.countProduct} sản phẩm khác</td>
+                                <td>${c.fullNameFirstProduct} và ${c.countProduct}Other products</td>
                             </c:if>
                             <c:if test="${c.countProduct == 0}">
                                 <td>${c.fullNameFirstProduct}</td>
@@ -64,7 +66,7 @@
                             <td>
                                 <c:if test="${c.status_order_name eq 'Submited'}">
                                     <div class="row">
-                                        <a href="cancel-order?order_id=${c.orderID}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true" >Hủy</a>
+                                        <a href="cancel-order?order_id=${c.orderID}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true" >Cancel</a>
                                     </div>
 
                                 </c:if></td>
@@ -85,21 +87,21 @@
                     "language": {
                         "decimal": "",
                         "emptyTable": "No data available in table",
-                        "info": " _START_ đến _END_ của _TOTAL_ bản ghi",
-                        "infoEmpty": "HIển thị 0 to 0 of 0 bản ghi",
-                        "infoFiltered": "(kết quả từ _MAX_ tổng số bản ghi)",
+                     //   "info": " _START_ đến _END_ của _TOTAL_ bản ghi",
+                      //  "infoEmpty": "HIển thị 0 to 0 of 0 bản ghi",
+                      //  "infoFiltered": "(kết quả từ _MAX_ tổng số bản ghi)",
                         "infoPostFix": "",
                         "thousands": ",",
-                        "lengthMenu": "Hiển thị _MENU_ bản ghi",
+                        "lengthMenu": "Display_MENU_record",
                         "loadingRecords": "Loading...",
                         "processing": "",
-                        "search": "Tìm kiếm:",
-                        "zeroRecords": "Không tìm thấy kết quả nào",
+                        "search": "Search",
+                        "zeroRecords": "No results found",
                         "paginate": {
                             "first": "F",
                             "last": "L",
-                            "next": "Sau",
-                            "previous": "Trước"
+                            "next": "Next",
+                            "previous": "Pre"
                         },
                         "aria": {
                             "sortAscending": ": activate to sort column ascending",

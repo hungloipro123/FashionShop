@@ -11,7 +11,7 @@ var myLineChart = new Chart(ctx1, {
 
     labels: ["1/2/2022", "2/2/2022", "3/2/2022", "4/2/2022", "5/2/2022", "6/2/2022", "7/2/2022"],
     datasets: [{
-      label: "Sản Phẩm",
+      label: "Products",
       lineTension: 0.3,
       backgroundColor: "rgba(2,117,216,0.2)",
       borderColor: "rgba(2,117,216,1)",
@@ -60,7 +60,7 @@ var myLineChart = new Chart(ctx2, {
   data: {
     labels: ["20/6/2022", "2/2/2022", "3/2/2022", "4/2/2022", "5/2/2022", "6/2/2022", "7/2/2022"],
     datasets: [{
-      label: "Sản Phẩm",
+      label: "Products",
       lineTension: 0.3,
       backgroundColor: "rgba(2,117,216,0.2)",
       borderColor: "rgba(2,117,216,1)",

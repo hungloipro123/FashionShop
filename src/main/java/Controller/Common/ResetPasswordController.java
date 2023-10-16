@@ -12,7 +12,16 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.SendMailOK;
+import java.util.Properties;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+//import model.SendMailOK;
 import model.User;
 
 /**
@@ -33,7 +42,7 @@ public class ResetPasswordController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -73,48 +82,96 @@ public class ResetPasswordController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
         String email = request.getParameter("email");
+        if (email == null || email.trim().isEmpty()) {
+            request.setAttribute("notification", "Email cannot be empty");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+            return;
+        }
+        if (!email.matches("^\\w+@[fF][pP][tT]\\.[eE][dD][uU]\\.[vV][nN]$") && !email.matches("^\\w+@[gG][mM][aA][iI][lL]\\.[cC][oO][mM]$")) {
+            request.setAttribute("notification", "Email must have fpt.edu.vn or gmail.com");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+            return;
+        }
 
         User user = new UserDAO().getUserByEmail(email);
-
         if (user == null) {
             request.setAttribute("notification", "Email không tồn tại");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
-            try {
-                String smtpServer = "smtp.gmail.com";
-                String to = user.getEmail();
-                String from = "khangdthe151162@fpt.edu.vn";
-                String subject = "Re-issue old password\n";
-                String body =
-                        "<!DOCTYPE html>\n"
-                        + "<html lang=\"en\">\n"
-                        + "\n"
-                        + "<head>\n"
-                        + "</head>\n"
-                        + "\n"
-                        + "<body>\n"
-                        + "    <h3 style=\"color: blue;\">Hello " + user.getFull_Name() + "</h3>\n"
-                        + "    <div>Chúng tôi nhận được yêu cầu đặt lại mật khẩu của bạn tại http://localhost:8080/home.</div>\n"
-                        + "    <h4 style=\"color: green;\">Mật khẩu cũ của bạn là :" + user.getPassword() + "</h4>\n"
-                        + "    <div>Nếu bạn không yêu cầu, bạn có thể bỏ qua email này. Nếu thực sự bạn quên mật khẩu, hãy click ngay vào nút bên trên , đăng nhập lại vào KingsMan để đổi mật khẩu , chúc bạn có một buổi mua sắm tuyệt vời với KingsMan.</div>\n"
-                        + "    <div>Hi vọng bạn sẽ không quên mật khẩu của mình, nhưng nếu có quên thì chúng tôi rất sẵn sàng hỗ trợ bạn.</div>\n"
-                        + "    <h3 style=\"color: blue;\">Trân trọng cảm ơn quý khách !</h3>\n"
-                        + "\n"
-                        + "</body>\n"
-                        + "\n"
-                        + "</html>";
-                String password = "khang0974421459";
-                SendMailOK.send(smtpServer, to, from, password, subject, body);
+            request.getSession().setAttribute("email", email);
 
-            } catch (Exception ex) {
-                System.out.println("Usage: " + ex.getMessage());
+            String to = email;
+
+            String subject = "Re-issue old password\n";
+            String body
+                    = "<!DOCTYPE html>\n"
+                    + "<html lang=\"en\">\n"
+                    + "\n"
+                    + "<head>\n"
+                    + "</head>\n"
+                    + "\n"
+                    + "<body>\n"
+                    + "    <h3 style=\"color: blue;\">Hello " + user.getFull_Name() + "</h3>\n"
+                    + "    <div>Chúng tôi nhận được yêu cầu đặt lại mật khẩu của bạn tại APSHOP</div>\n"
+                    + " <a href=\"http://localhost:8080/change-password?email=" + user.getEmail() + "\">Click here</a>"
+                    + "    <div>Nếu bạn không yêu cầu, bạn có thể bỏ qua email này. Nếu thực sự bạn quên mật khẩu, hãy click ngay vào nút bên trên , đăng nhập lại vào APShop để đổi mật khẩu , chúc bạn có một buổi mua sắm tuyệt vời với APShop.</div>\n"
+                    + "    <div>Hi vọng bạn sẽ không quên mật khẩu của mình, nhưng nếu có quên thì chúng tôi rất sẵn sàng hỗ trợ bạn.</div>\n"
+                    + "    <h3 style=\"color: blue;\">Trân trọng cảm ơn quý khách !</h3>\n"
+                    + "\n"
+                    + "</body>\n"
+                    + "\n"
+                    + "</html>";
+            boolean result = sendEmail(to, subject, body);
+        }
+        request.setAttribute("notification", "Please check your email!");
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
+
+    private boolean sendEmail(String to, String subject, String body) {
+        // Cấu hình các thông tin cần thiết để gửi email
+        String host = "smtp.gmail.com";
+        String port = "587";
+        final String username = "thongvmce171505@fpt.edu.vn";
+        final String password = "ksnmmrjyfxibwrkg";
+
+        // Thiết lập các thuộc tính cho kết nối SMTP
+        Properties props = new Properties();
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.port", port);
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+
+        // Tạo đối tượng Authenticator để xác thực người dùng
+        Authenticator authenticator = new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
             }
-            request.setAttribute("notification", "Hãy kiểm tra hòm thư của bạn");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+        };
+
+        // Tạo phiên gửi email
+        Session s = Session.getInstance(props, authenticator);
+
+        try {
+            // Tạo đối tượng MimeMessage
+            MimeMessage message = new MimeMessage(s);
+
+            // Đặt thông tin người gửi và người nhận
+            message.setFrom(new InternetAddress(username));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+            // Đặt tiêu đề và nội dung email
+            message.setSubject(subject, "UTF-8");
+            message.setContent(body, "text/html; charset=UTF-8");
+
+            // Gửi email
+            Transport.send(message);
+
+            return true;
+        } catch (MessagingException ex) {
+            ex.printStackTrace();
+            return false;
         }
     }
 

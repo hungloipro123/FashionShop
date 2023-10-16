@@ -7,17 +7,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-light    ">
             <!-- Navbar Brand-->
-            <a class="navbar-brand me-5 ti-joomla" href="home" style="padding-left: 2%">KingsMan</a>
+            <a class="navbar-brand me-5 ti-joomla" href="home" style="padding-left: 2%">VDreamer</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item me-4">
-                        <a class="nav-link active" aria-current="page" href="home">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="home">Home Page</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="list">Sản Phẩm</a>
+                        <a class="nav-link" href="list">Products</a>
                     </li>
                     <li class="nav-item me-4">
                         <a class="nav-link" href="blog">Blog</a>

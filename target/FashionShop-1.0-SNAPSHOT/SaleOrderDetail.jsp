@@ -228,7 +228,7 @@
                                                             <div class="col-auto my-auto"> <h6 class="mb-0">${s.category_name}</h6></div>
                                                             <div class="col my-auto"> <h6 class="mb-0">Giá: ${s.product_price}</h6></div>
                                                             <div class="col my-auto"> <h6 class="mb-0">Số lượng: ${s.quantity}</h6></div>
-                                                            <div class="col my-auto"> <h6 class="mb-0">Tổng chi phí: ${s.product_price*s.quantity}</h6></div> 
+                                                            <div class="col my-auto"> <h6 class="mb-0">Total cost: ${s.product_price*s.quantity}</h6></div> 
 
                                                         </div>
                                                     </div>
@@ -302,7 +302,7 @@
                                 <div class="card-footer">
                                     <div class="jumbotron-fluid">
                                         <div class="row justify-content-between ">
-                                            <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="https://salt.tikicdn.com/ts/product%2F73%2F31%2F8f%2F0d2df2f2799036d45c6ed06b946d361e.png" width="115" height="115"></div>
+                                            <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="assets/img/logo1.png" width="115" height="115"></div>
                                             <div class="col-auto my-auto "><h2 class="mb-0 font-weight-bold">TOTAL PAID</h2></div>
                                             <div class="col-auto my-auto ml-auto"><h1 class="display-3 ">${k.total_cost}đ</h1></div>
                                         </div>

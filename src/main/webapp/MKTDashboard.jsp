@@ -202,7 +202,7 @@
                     data: {
                     labels: [<c:forEach  items="${listChartProductArea}" var="product" > "${product.date}",</c:forEach>],
                             datasets: [{
-                            label: "Sản Phẩm",
+                            label: "Products",
                                     lineTension: 0.3,
                                     backgroundColor: "rgba(2,117,216,0.2)",
                                     borderColor: "rgba(2,117,216,1)",
@@ -396,7 +396,7 @@
                     data: {
                     labels: [<c:forEach  items="${listChartProductBar}" var="product" > "${product.date}",</c:forEach>],
                             datasets: [{
-                            label: "Sản Phẩm",
+                            label: "Products",
                                     backgroundColor: "rgba(2,117,216,1)",
                                     borderColor: "rgba(2,117,216,1)",
                                     data: [<c:forEach  items="${listChartProductBar}" var="product" > "${product.value}",</c:forEach>],

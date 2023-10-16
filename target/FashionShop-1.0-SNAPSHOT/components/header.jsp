@@ -12,8 +12,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a href="home">
-                <div style="background: black;width:75px;">
-                    <img style="width:100%" src="assets/img/logo.png">
+                <div style="width:65px;">
+                    <img style="width:100%" src="assets/img/logo1.png">
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
                                 </c:if>
                             </button>
                             <ul class="dropdown-menu menuScroll">
-                                <li><a class="dropdown-item" type="button" data-toggle="modal"  data-target="#userProfileModal">Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item" type="button" data-toggle="modal"  data-target="#userProfileModal">User Information</a></li>
                                     <c:if test="${sessionScope.us.role_Id == 1}">
                                     <li><a class="dropdown-item" href="myorder">Danh sách đơn hàng</a></li>
                                     </c:if>
@@ -104,6 +104,7 @@
                 this.classList.add('active');
             });
         });
+        
     </script>
 </div>
 

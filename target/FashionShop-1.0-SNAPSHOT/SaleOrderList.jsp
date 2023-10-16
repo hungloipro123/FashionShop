@@ -97,7 +97,7 @@
             <%@include file="components/sale-left-dashboard.jsp" %>
             <div class="groundy" id="layoutSidenav_content">
 
-                <h2 class="mtop title-order" >Danh sách các đơn hàng</h2>
+                <h2 class="mtop title-order" >List of orders</h2>
                 <div class="container mtop" style="width:100%">
                     <table class="table table-striped table-bordered tbborder" id="sortTable">
                         <thead>
@@ -177,7 +177,7 @@
                         "lengthMenu": "Hiển thị _MENU_ bản ghi",
                         "loadingRecords": "Loading...",
                         "processing": "",
-                        "search": "Tìm kiếm:",
+                        "search": "Search:",
                         "zeroRecords": "Không tìm thấy kết quả nào",
                         "paginate": {
                             "first": "F",

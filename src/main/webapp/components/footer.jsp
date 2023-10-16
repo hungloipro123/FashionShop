@@ -35,16 +35,14 @@
                             </select>
                         </div>
                         <br>
-
-
                         <center><button type="submit" class="btn btn-dark" style="padding-right: 160px;padding-left: 160px; border-radius: 100px;">Comments</button></center>
-
                     </form>
                     <br><br>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.735018289041!2d105.75462091477622!3d10.037731875761857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175e7e4a5f0f7d7%3A0x5c3f3a27e5a8d11a!2sFPT%20University%20Can%20Tho!5e0!3m2!1sen!2s!4v1653919437201!5m2!1sen!2s" 
                 width=90% height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -53,7 +51,7 @@
     <div class="info-footer">
         <div class="content-footer">
             <h2>Address</h2>
-            <p class="mt-40">HUB Hà Nội: Hoalaclink03, thôn Vân Lôi, xã Bình Yên, huyện Thạch Thất, TP. Hà Nội</p>
+            <p class="mt-40">VDreamer Cần Thơ: Hưng Lợi, Ninh Kiều, TP. Cần Thơ</p>
         </div>
 
         <div class="feedback-footer">

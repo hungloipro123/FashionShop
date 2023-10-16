@@ -50,7 +50,7 @@
                     <input type="hidden"  name="id" value="${product.id}"/><br/>
                     <table style="background-color: window ; width: 60% ; border-radius: 10px">
                         <tr>
-                            <td>Tên sản phẩm:</td>
+                            <td>Product Name:</td>
                             <td><input style="border-radius: 10px; width: 62%" type="text"  name="name" value="${product.name}"/><br/></td>
                         </tr>
                         <tr>

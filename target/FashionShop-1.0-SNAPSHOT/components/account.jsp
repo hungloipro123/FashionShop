@@ -18,21 +18,21 @@
     <div class="modal-dialog">
         <div class="modal-content" style="border-radius: 10px; margin-top: 258px;">
             <div class="modal-header">
-                <h2 class="" id="loginModal" style="text-align:center; font-family: Arial"><b style="padding-left: 150px;">Đăng Nhập</b></h2><br>
+                <h2 class="" id="loginModal" style="text-align:center; font-family: Arial"><b style="padding-left: 180px;">Login</b></h2><br>
             </div>
             <div class="modal-body">
                 <form action="login" method="post">
                     <div class="form-group">
-                        <input name="email" type="email" class="form-control" placeholder="Email của bạn"style="border-radius: 100px;" required="">
+                        <input name="email" type="email" class="form-control" placeholder="Email"style="border-radius: 100px;" required="">
                     </div>
                     <div class="form-group">
-                        <input name="password" type="password" class="form-control" placeholder="Mật khẩu" style="border-radius: 100px;" required>
+                        <input name="password" type="password" class="form-control" placeholder="Password" style="border-radius: 100px;" required>
                     </div>
-                    <center><button type="submit" class="btn btn-dark" style="padding-right: 193px;padding-left: 193px; border-radius: 100px;">Đăng nhập</button></center>
+                    <center><button type="submit" class="btn btn-dark" style="padding-right: 193px;padding-left: 193px; border-radius: 100px;">Login</button></center>
                 </form>
                 <br><br>
-                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#ResetPasswordModal" style="float:right; text-decoration: none; border-radius: 100px;">Quên Mật Khẩu?</a>
-                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" style="float:left; text-decoration: none; border-radius: 100px;">Đăng ký tài khoản mới</a>
+                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#ResetPasswordModal" style="float:right; text-decoration: none; border-radius: 100px;">Forgot password?</a>
+                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" style="float:left; text-decoration: none; border-radius: 100px;">Register?</a>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="border-radius: 10px; margin-top: 180px;">
             <div class="modal-header">
-                <h2 class="" id="registerModal" style="text-align:center; font-family: Arial"><b style="padding-left: 100px;">Đăng ký tài khoản</b></h2><br>
+                <h2 class="" id="registerModal" style="text-align:center; font-family: Arial"><b style="padding-left: 180px;">Register</b></h2><br>
             </div>
 
             <div class="modal-body">
@@ -54,7 +54,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Họ và tên" name="fullName" style="border-radius: 100px;" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Full Name" name="fullName" style="border-radius: 100px;" required>
                                     </div></div>
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -63,31 +63,31 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Số điện thoại" name="mobile" style="border-radius: 100px;" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Phone" name="mobile" style="border-radius: 100px;" required>
                                     </div></div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" name="password" style="border-radius: 100px;" required>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="password" style="border-radius: 100px;" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" id="pwd" placeholder="Nhập lại mật khẩu" name="repassword" style="border-radius: 100px;" required>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Re-password" name="repassword" style="border-radius: 100px;" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group" required>
-                                        Giới tính&nbsp;&nbsp;&nbsp;
-                                        <input class="" name="gender" type="radio" value="True" required/>&nbsp; Nam
+                                        Gender:&nbsp;&nbsp;&nbsp;
+                                        <input class="" name="gender" type="radio" value="True" required/>&nbsp; Male
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input class="" name="gender" type="radio" value="False" required/>&nbsp; Nữ
+                                        <input class="" name="gender" type="radio" value="False" required/>&nbsp; Female
                                     </div>
                                 </div>
-                                <br><br><center><button type="submit" class="btn btn-dark" style="padding-right: 190px;padding-left: 190px; border-radius: 100px;">Đăng ký</button></center><br><br>
+                                <br><br><center><button type="submit" class="btn btn-dark" style="padding-right: 190px;padding-left: 190px; border-radius: 100px;">Register</button></center><br><br>
                             </div>
                         </form>
                         <br>
-                        <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal" style="padding-left: 150px; text-decoration: none; border-radius: 100px;">Quay lại đăng nhập</a> 
+                        <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal" style="padding-left: 180px; text-decoration: none; border-radius: 100px;">Return Login</a> 
                     </div>    
                 </section>
             </div>
@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="row mt-5 col-md-6 text-center"><button class="btn btn-outline-dark" type="submit">Lưu</button></div>
                                     </form>
-                                    <div class="row mt-5 col-md-6 text-center d-flex"><a href="index.jsp"><button class="btn btn-outline-dark" type="button">Trang chủ</button></a></div>
+                                    <div class="row mt-5 col-md-6 text-center d-flex"><a href="index.jsp"><button class="btn btn-outline-dark" type="button">Home Page</button></a></div>
                                 </div>
                             </div>
                         </div>
@@ -202,12 +202,12 @@
     <div class="modal-dialog">
         <div class="modal-content" style="border-radius: 10px; margin-top: 150px;">
             <div class="modal-header">
-                <h1 style="text-align: center ; margin-left: 70px;">Cấp lại mật khẩu</h1>
+                <h1 style="text-align: center ; margin-left: 90px;">Reset Password</h1>
             </div>
             <div class="modal-body">
                 <form action="resetpassword" method="post">
                     <div class="form-group">
-                        <input name="email" type="email" class="form-control" placeholder="Email của bạn"style="border-radius: 100px;" required>
+                        <input name="email" type="email" class="form-control" placeholder="Email"style="border-radius: 100px;" required>
                     </div>
                     <br>
                     <center>
@@ -215,12 +215,13 @@
                                 padding-left: 200px;
                                 border-radius: 100px;
                                 margin-bottom: -40px;
-                                height: 50px;">Kiểm tra
+                                height: 50px;">Submit
                         </button>
                     </center>
                 </form>
+                <p>${mess}</p>
                 <br><br>
-                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal" style="padding-left: 170px; text-decoration: none; border-radius: 100px;">Quay lại Đăng nhập</a> 
+                <a type="button" data-toggle="modal" data-dismiss="modal" data-target="#loginModal" style="padding-left: 170px; text-decoration: none; border-radius: 100px;">Return Login</a> 
             </div>
         </div>
     </div>

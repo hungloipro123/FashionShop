@@ -157,7 +157,7 @@
                             "lengthMenu": "Hiển thị _MENU_ đánh giá",
                             "loadingRecords": "Loading...",
                             "processing": "",
-                            "search": "Tìm kiếm:",
+                            "search": "Search",
                             "zeroRecords": "Không tìm thấy kết quả nào",
                             "paginate": {
                                 "first": "F",

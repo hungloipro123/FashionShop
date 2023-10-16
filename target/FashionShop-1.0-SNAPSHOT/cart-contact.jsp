@@ -212,37 +212,37 @@
             <div class=" row">
                 <div class="style-btn col-md-6 summary">
                     <div class="row">
-                        <h4 class="cal"><b>Thông tin giao hàng</b></h4>
-                        <div class="col align-self-center text-right text-muted">Hãy sửa các thông tin chính xác nhất</div>
+                        <h4 class="cal"><b>Shipping Information</b></h4>
+                        <div class="col align-self-center text-right text-muted">Please provide the most accurate information</div>
                     </div>
                     <hr>
                     <form class="input-name" action="add-order">
-                        <label for="fullname">Họ Tên</label>
+                        <label for="fullname">Full name</label>
                         <input id="fullname" type="text" name="fullname" value="${user.full_Name}">
 
-                        <label for="phone">SỐ ĐIỆN THOẠI</label>
+                        <label for="phone">Phone number</label>
                         <input id="phone" type="text" name="phone" value="${user.mobile}">
 
-                        <label for="address">ĐỊA CHỈ</label>
+                        <label for="address">Address</label>
                         <input id="address" type="text" name="address" value="${user.address}">
 
-                        <label for="note">GHI CHÚ</label>
+                        <label for="note">NOTE</label>
                         <textarea id="note" class="form-control" name="note" style="background-color: rgb(247, 247, 247);"
                                   id="exampleFormControlTextarea1" rows="3"></textarea>
                     
                     <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                        <div class="col">TỔNG TIỀN</div>
+                        <div class="col">TOTAL</div>
                         <div class="col text-right">${sum}đ</div>
                         <input type="hidden" name="sum" value="${sum}">
                     </div>
-                    <button type="submit" class="btn" style="font-size: 12px;">Gửi thông tin</button>
+                    <button type="submit" class="btn" style="font-size: 12px;">Submit </button>
                     </form>
                 </div>
                 <div class="col-md-6 cart">
                     <div class="title">
                         <div class="row">
                             <div class="col">
-                                <h4><b>Sản phẩm</b></h4>
+                                <h4><b>Products</b></h4>
                             </div>
                             <!-- <div class="col align-self-center text-right text-muted">3 items</div> -->
                         </div>
@@ -259,14 +259,14 @@
                                 <div class="row">${c.product_name}</div>
                             </div>
                             <div class="col" style="text-align: center;">
-                                <div class="text-muted">Số lượng: ${c.quantity}</div>
+                                <div class="text-muted">Quantity: ${c.quantity}</div>
                             </div>
                             <div class="col" style="text-align: center;">${c.product_price}đ</div>
                         </div>
                     </div>
                     </c:forEach>
 
-                    <div class="back-to-shop text-muted"><a href="carts">&leftarrow; Trở lại cửa hàng</a></div>
+                    <div class="back-to-shop text-muted"><a href="carts">&leftarrow; Back to shop</a></div>
                 </div>
                 
             </div>

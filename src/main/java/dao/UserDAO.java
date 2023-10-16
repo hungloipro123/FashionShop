@@ -1,6 +1,9 @@
 package dao;
 
+import EncodeMD5.MD5;
+import EncodeMD5.PassToMD5;
 import context.DBContext;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +19,7 @@ public class UserDAO extends DBContext {
         try {
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, email);
-            st.setString(2, password);
+            st.setString(2, MD5.encode(password));
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
                 User u = User.builder()
@@ -72,7 +75,7 @@ public class UserDAO extends DBContext {
         try {
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, fullName);
-            st.setString(2, password);
+            st.setString(2, PassToMD5.getMd5(password));
             st.setString(3, gender);
             st.setString(4, email);
             st.setString(5, mobile);
@@ -280,6 +283,33 @@ public class UserDAO extends DBContext {
             System.out.println(e);
         }
     }
+    public boolean updatePass(String email, String password) {
+        try {
+            String sql = "update [dbo].[User] set password = ? where email = ?";
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.setString(1, PassToMD5.getMd5(password));
+            st.setString(2, email);
+            int rowsUpdated = st.executeUpdate();
+            connection.close();
+            return rowsUpdated > 0;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+//    public String getStatus(int status, String email) {
+//        String sql = "Select * from dbo.[User] where status = 'false' and email = ?";
+//        try {
+//            PreparedStatement st = connection.prepareStatement(sql);
+//            st.setInt(1, status);
+//            st.setString(2, email);
+//            st.executeUpdate();
+//
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
+//    }
 
     public String getAuthorById(int author_id) {
         String sql = "select * from [User] where userId = ? ";

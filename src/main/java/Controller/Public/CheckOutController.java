@@ -392,7 +392,7 @@ public class CheckOutController extends HttpServlet {
         } catch (Exception ex) {
             System.out.println("Usage: " + ex.getMessage());
         }
-        request.setAttribute("notification", "Hãy kiểm tra hòm thư của bạn");
+        request.setAttribute("notification", "Please check your email!");
 
         request.getRequestDispatcher("cartCompletion.jsp").forward(request, response);
     }

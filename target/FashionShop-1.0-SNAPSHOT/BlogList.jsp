@@ -68,10 +68,10 @@
                     <div class="col-mb-4">
                         <select class="dropdown-font-new" aria-label="Default select example" onchange="location = this.value;"> Tất cả
                             <option value="blog?${historyKey}${historyCategoryId}&type=desc" ${type eq "desc" ? "Selected" : ""}>
-                                Mới Nhất
+                                Newest
                             </option>
                             <option value="blog?${historyKey}${historyCategoryId}" ${type == null ? "Selected" : ""}>
-                                Cũ Nhất
+                                Oldest
                             </option>
                         </select>
                     </div>

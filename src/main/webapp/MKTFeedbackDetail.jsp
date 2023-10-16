@@ -111,7 +111,7 @@
                                                 </c:if>
                                             </c:forEach>
                                         </div>
-                                        <div class="col-md-12" style="margin-bottom: 5px">Tên sản phẩm: <input  type="text" class="form-control" value="${feedback.product_name}" readonly/></div> 
+                                        <div class="col-md-12" style="margin-bottom: 5px">Product Name: <input  type="text" class="form-control" value="${feedback.product_name}" readonly/></div> 
 
                                         <div class="col-md-12" style="margin-bottom: 5px">Phản hồi<input type="text" class="form-control" value="${feedback.feedback}"  readonly=""></div>
                                         <div class="col-md-12" style="margin-bottom: 10px">Ngày cập nhật<input type="date" class="form-control" value="${feedback.date}"  readonly=""></div>
