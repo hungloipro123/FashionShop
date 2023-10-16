@@ -29,26 +29,32 @@ public class SuccessfulCheckoutController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            OrderDao od = new OrderDao();
-            String id_raw = request.getParameter("vnp_OrderInfo");
+        throws ServletException, IOException {
+    response.setContentType("text/html;charset=UTF-8");
+    try (PrintWriter out = response.getWriter()) {
+        String id_raw = request.getParameter("vnp_OrderInfo");
+
+        if (id_raw != null) {
             int id = Integer.parseInt(id_raw);
+
             if (id == -1) {
                 request.setAttribute("notification", "Bạn đã chọn phương thức thanh toán khi nhận hàng.");
-                request.getRequestDispatcher("index.jsp").forward(request, response);
-            }
-            if (id_raw != null) {
+                request.getRequestDispatcher("/home").forward(request, response);
+            } else {
+                OrderDao od = new OrderDao();
                 od.updateStatusOrder(id, 2);
                 request.setAttribute("notification", "Thanh toán bằng VNPAY thành công.");
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                request.getRequestDispatcher("/home").forward(request, response);
             }
-            
-
         }
+    } catch (NumberFormatException e) {
+        // Xử lý lỗi nếu việc chuyển đổi "id_raw" thành số gây ra ngoại lệ NumberFormatException.
+        // Bạn có thể thêm xử lý tại đây nếu cần thiết.
+    } catch (Exception e) {
+        // Xử lý các lỗi khác nếu có.
+        // Bạn có thể thêm xử lý tại đây nếu cần thiết.
     }
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -133,7 +133,7 @@ public class ResetPasswordController extends HttpServlet {
         String host = "smtp.gmail.com";
         String port = "587";
         final String username = "thongvmce171505@fpt.edu.vn";
-        final String password = "ksnmmrjyfxibwrkg";
+        final String password = "tqcuplgprqejdqev";
 
         // Thiết lập các thuộc tính cho kết nối SMTP
         Properties props = new Properties();

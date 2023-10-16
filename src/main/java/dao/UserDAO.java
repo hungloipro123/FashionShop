@@ -292,6 +292,7 @@ public class UserDAO extends DBContext {
             int rowsUpdated = st.executeUpdate();
             connection.close();
             return rowsUpdated > 0;
+           
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;

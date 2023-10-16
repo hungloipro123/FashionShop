@@ -35,10 +35,10 @@ public class ChangePassword extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ChangePassword</title>");            
+            out.println("<title>Servlet ChangePassword</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ChangePassword at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ChangePassword at " + "ABC" + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -56,7 +56,7 @@ public class ChangePassword extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("changePasswordd.jsp").forward(request, response);
     }
 
     /**
@@ -76,24 +76,26 @@ public class ChangePassword extends HttpServlet {
 
         if (!pass.equals(repass)) {
             request.setAttribute("mess", "New password and confirm new password do not match");
-            request.getRequestDispatcher("changePassword.jsp").forward(request, response);
+            request.getRequestDispatcher("changePasswordd.jsp").forward(request, response);
             return;
         }
 
         String passRegex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
         if (!pass.matches(passRegex)) {
             request.setAttribute("mess", "New password must be at least 8 characters, include letters and numbers, no special characters");
-            request.getRequestDispatcher("changePassword.jsp").forward(request, response);
+            request.getRequestDispatcher("changePasswordd.jsp").forward(request, response);
             return;
         }
-
         UserDAO dao = new UserDAO();
 
         boolean result = dao.updatePass(email, pass);
         if (result) {
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+
+            request.getRequestDispatcher("/home").forward(request, response);
+
         } else {
-            request.getRequestDispatcher("changePassword.jsp").forward(request, response);
+            request.getRequestDispatcher("changePasswordd.jsp").forward(request, response);
+
         }
 
     }
