@@ -62,7 +62,7 @@
                             <ul class="dropdown-menu menuScroll">
                                 <li><a class="dropdown-item" type="button" data-toggle="modal"  data-target="#userProfileModal">User Information</a></li>
                                     <c:if test="${sessionScope.us.role_Id == 1}">
-                                    <li><a class="dropdown-item" href="myorder">Danh sách đơn hàng</a></li>
+                                    <li><a class="dropdown-item" href="myorder">Order List</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 2}">
                                     <li><a class="dropdown-item" href="mkt-dashboard">Quản lý tiếp thị</a></li>
