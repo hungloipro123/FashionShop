@@ -65,7 +65,7 @@
                                     <li><a class="dropdown-item" href="myorder">Order List</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 2}">
-                                    <li><a class="dropdown-item" href="mkt-dashboard">Quản lý tiếp thị</a></li>
+                                    <li><a class="dropdown-item" href="mkt-dashboard">Quảnlýtiếp thị</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 3 || sessionScope.us.role_Id == 4}">
                                     <li><a class="dropdown-item" href="sale-dashboard">Quản lý bán hàng</a></li>
