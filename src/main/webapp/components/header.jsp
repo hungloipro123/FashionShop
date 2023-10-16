@@ -65,10 +65,10 @@
                                     <li><a class="dropdown-item" href="myorder">Order List</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 2}">
-                                    <li><a class="dropdown-item" href="mkt-dashboard">Quản lý tiếp thị</a></li>
+                                    <li><a class="dropdown-item" href="mkt-dashboard">Manager Management</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 3 || sessionScope.us.role_Id == 4}">
-                                    <li><a class="dropdown-item" href="sale-dashboard">Quản lý bán hàng</a></li>
+                                    <li><a class="dropdown-item" href="sale-dashboard">Staff Management</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.us.role_Id == 5}">
                                     <li><a class="dropdown-item" href="admin-dashboard">Quản lý hệ thống</a></li>
