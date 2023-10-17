@@ -26,7 +26,7 @@
                         <b>Rate:</b>&nbsp;&nbsp;
                         <div class="form-group" >
                             <select name = "star" style="border-radius: 100px;" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                <option selected>Rating For AP Shop</option>
+                                <option selected>Rating For VDreamer</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="feedback-footer">
-            <h2 class="mt-40">AP Shop</h2>
+            <h2 class="mt-40">VDreamer</h2>
             <p>We always appreciate and listen to all feedback from customers to be able to upgrade the service and product experience better every day. <br>Please leave your comments below!!!</p>
             <a data-toggle="modal" data-dismiss="modal" data-target="#feedback_common"><input class="Button-Feedback mt-16" type="submit" value="Gửi ý kiến"></a> 
             <br>

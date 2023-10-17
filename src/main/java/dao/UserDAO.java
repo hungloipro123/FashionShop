@@ -112,7 +112,7 @@ public class UserDAO extends DBContext {
                     + "      [password] = ?\n"
                     + " WHERE userId = ?\n";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, new_pass1);
+            ps.setString(1, PassToMD5.getMd5(new_pass1));
             ps.setInt(2, userId);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -125,7 +125,7 @@ public class UserDAO extends DBContext {
             String sql = "select * from [User] where userId = ? and password = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, userId);
-            ps.setString(2, old_pass);
+            ps.setString(2, PassToMD5.getMd5(old_pass));
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 User user = User.builder()

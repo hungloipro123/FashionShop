@@ -71,7 +71,7 @@ public class LoginController extends HttpServlet {
         UserDAO dao = new UserDAO();
         User u = dao.login(email, password);
         if (u == null) {
-            request.setAttribute("notification", "Sai email hoặc mật khẩu");
+            request.setAttribute("notification", "Incorrect email or password.");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
             session.setAttribute("us", u);

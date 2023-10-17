@@ -6,7 +6,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Notification User -->
 <c:if test="${notification !=null}">
-    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: fixed; z-index: 15 ; margin-left: 40%">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: fixed; z-index: 15 ; left: 50%;
+         transform: translateX(-50%);
+         margin-top: 0; /* Xóa margin-top để không căn giữa theo chiều dọc */
+         text-align: center;">
         <strong>${notification}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -101,7 +104,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="border-radius: 10px; margin-top: 150px; min-width: 1148px; margin-left: -300px;">
             <div class="modal-header">
-                <h2 class="" id="userProfileModal" style="text-align:center; font-family: Arial"><b style="padding-left: 100px;">Thông tin cá nhân</b></h2><br>
+                <h2 class="" id="userProfileModal" style="text-align:center; font-family: Arial"><b style="padding-left: 100px;">User Profile</b></h2><br>
             </div>
 
             <div class="modal-body">
@@ -130,13 +133,13 @@
                                 <div class="p-3 py-5">
                                     <form action="edit"  method="post" enctype="multipart/form-data">
                                         <div class="row mt-4">
-                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Họ và tên:</label><input type="text" class="form-control" name="fullName" placeholder="Họ và tên" value="${sessionScope.us.full_Name}"></div>&nbsp;
+                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Full Name:</label><input type="text" class="form-control" name="fullName" placeholder="Họ và tên" value="${sessionScope.us.full_Name}"></div>&nbsp;
                                             <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Email:</label><input type="text" class="form-control" name="email" placeholder="Email" value="${sessionScope.us.email}" readonly></div>&nbsp;
-                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Số điện thoại:</label><input type="text" class="form-control" name="mobile" placeholder="Mobile" value="${sessionScope.us.mobile}"></div>&nbsp;
-                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Địa chỉ:</label><input type="text" class="form-control" name="address" placeholder="Địa chỉ" value="${sessionScope.us.address}"></div>&nbsp;
+                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Phone:</label><input type="text" class="form-control" name="mobile" placeholder="Mobile" value="${sessionScope.us.mobile}"></div>&nbsp;
+                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Address:</label><input type="text" class="form-control" name="address" placeholder="Địa chỉ" value="${sessionScope.us.address}"></div>&nbsp;
                                             
-                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Ảnh đại diện:</label><input type="file" class="form-control" name="avatar" placeholder="Ảnh đại diện" value="${sessionScope.us.avatar}"></div>&nbsp;
-                                            <div class="row mt-4 col-md-3"><label class="labels font-weight-bold" style="font-size: 15px;" name="gender" value="${sessionScope.us.gender}">Giới tính:</label>
+                                            <div class="row mt-4 col-md-6"><label class="labels font-weight-bold" style="font-size: 15px; padding: 0px;">Avatar:</label><input type="file" class="form-control" name="avatar" placeholder="Ảnh đại diện" value="${sessionScope.us.avatar}"></div>&nbsp;
+                                            <div class="row mt-4 col-md-3"><label class="labels font-weight-bold" style="font-size: 15px;" name="gender" value="${sessionScope.us.gender}">Gender:</label>
                                                 <div><input name="gender" type="radio" value="1" ${sessionScope.us.gender == true ? 'checked' : ''}/>
                                                     Nam
                                                 </div>
@@ -146,9 +149,9 @@
                                                     <input type="hidden" name="userId" value="${sessionScope.us.user_Id}"/>
                                             </div>
                                             <div class="row mt-4 col-md-6" hidden><label class="labels" style="font-size: 15px;">ID</label><input type="text" class="form-control" name="userId" placeholder="ID" value="${sessionScope.us.user_Id}"></div>&nbsp;
-                                            <div class="row mt-4 col-md-3"><label class="labels font-weight-bold" style="font-size: 15px;margin-right: 10px;text-align: center;">Mật khẩu:</label><a href="#" style="text-decoration: none; margin-left: 2px;"><button type="button" data-toggle="modal" data-dismiss="modal" data-target="#ChangePasswordModal"   class="btn btn-outline-dark" value="">Đổi mật khẩu</button></a></div>
+                                            <div class="row mt-4 col-md-3"><label class="labels font-weight-bold" style="font-size: 15px;margin-right: 10px;text-align: center;">Password:</label><a href="#" style="text-decoration: none; margin-left: 2px;"><button type="button" data-toggle="modal" data-dismiss="modal" data-target="#ChangePasswordModal"   class="btn btn-outline-dark" value="">Đổi mật khẩu</button></a></div>
                                         </div>
-                                        <div class="row mt-5 col-md-6 text-center"><button class="btn btn-outline-dark" type="submit">Lưu</button></div>
+                                        <div class="row mt-5 col-md-6 text-center"><button class="btn btn-outline-dark" type="submit">Save</button></div>
                                     </form>
                                     <div class="row mt-5 col-md-6 text-center d-flex"><a href="index.jsp"><button class="btn btn-outline-dark" type="button">Home Page</button></a></div>
                                 </div>

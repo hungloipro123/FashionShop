@@ -44,7 +44,7 @@ public class RegisterController extends HttpServlet {
         String gender = request.getParameter("gender");
 
         if (!password.equals(repassword)) {
-            request.setAttribute("notification", "Nhập lại mật khẩu không giống nhau");
+            request.setAttribute("notification", "Passwords do not match, please re-enter");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } else {
             UserDAO dao = new UserDAO();
@@ -58,10 +58,10 @@ public class RegisterController extends HttpServlet {
             } else if (u == null) {
                 //dang ky thanh cong
                 dao.register(fullName, password, gender, email, mobile);
-                request.setAttribute("notification", "Đăng kí thành công");
+                request.setAttribute("notification", "Registration successful");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             } else {
-                request.setAttribute("notification", "Email đã tồn tại");
+                request.setAttribute("notification", "Email already exists");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
         }
