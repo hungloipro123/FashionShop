@@ -51,13 +51,13 @@
     <div class="info-footer">
         <div class="content-footer">
             <h2>Address</h2>
-            <p class="mt-40">VDreamer Cần Thơ: Hưng Lợi, Ninh Kiều, TP. Cần Thơ</p>
+            <p class="mt-40">VDreamer Can Tho: Hung Loi, Ninh Kieu, Can Tho City</p>
         </div>
 
         <div class="feedback-footer">
             <h2 class="mt-40">VDreamer</h2>
             <p>We always appreciate and listen to all feedback from customers to be able to upgrade the service and product experience better every day. <br>Please leave your comments below!!!</p>
-            <a data-toggle="modal" data-dismiss="modal" data-target="#feedback_common"><input class="Button-Feedback mt-16" type="submit" value="Gửi ý kiến"></a> 
+            <a data-toggle="modal" data-dismiss="modal" data-target="#feedback_common"><input class="Button-Feedback mt-16" type="submit" value="Comments"></a> 
             <br>
             <br>
             <br>

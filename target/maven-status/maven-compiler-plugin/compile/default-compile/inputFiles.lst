@@ -7,6 +7,7 @@ D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\SliderDAO.jav
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Customer.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Product.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\OrderDao.java
+D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\ProductListController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\BlogDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\SettingDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\EncodeMD5\MD5.java
@@ -21,15 +22,18 @@ D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Slider.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\EncodeMD5\PassToMD5.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\User.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Common\LoginController.java
+D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\FeedbackCommonController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\HomeController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\DateDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\OrderDetailDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Category.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\CategoryDAO.java
+D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\BlogDetailController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Setting.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Common\ResetPasswordController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\CustomerDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\ChartStar.java
+D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\BlogController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\UserDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\context\DBContext.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Common\ChangePasswordController.java
@@ -39,5 +43,6 @@ D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Feedback.ja
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Role.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\dao\CartDAO.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Cart.java
+D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\Controller\Public\ListDetailController.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\Chart.java
 D:\S5\SWP391\FashionShop\FashionShop\FashionShop\src\main\java\model\SendMailOK.java
