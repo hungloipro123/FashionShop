@@ -6,6 +6,7 @@ model\TypeSetting$TypeSettingBuilder.class
 dao\OrderDao.class
 model\CategoryBlog.class
 dao\FeedbackDAO.class
+Controller\Public\CartContactController.class
 model\Product.class
 model\Setting$SettingBuilder.class
 dao\UserDAO.class
@@ -31,6 +32,7 @@ model\Category.class
 model\Customer$CustomerBuilder.class
 model\UpdateCustomer$UpdateCustomerBuilder.class
 model\Product$ProductBuilder.class
+Controller\Customer\MyOrderController.class
 dao\ProductDAO.class
 model\Feedback$FeedbackBuilder.class
 Controller\Common\ResetPasswordController$1.class
@@ -40,6 +42,7 @@ Controller\Common\RegisterController.class
 model\Cart.class
 model\SendMailOK$1.class
 Controller\Common\ChangePasswordController.class
+Controller\Customer\OrderDetailController.class
 dao\CartDAO.class
 model\Setting.class
 EncodeMD5\PassToMD5.class
@@ -51,6 +54,7 @@ model\Chart.class
 model\Slider$SliderBuilder.class
 Controller\Public\HomeController.class
 context\DBContext.class
+Controller\Customer\CancelOrderController.class
 model\Chart$ChartBuilder.class
 model\ChartStar$ChartStarBuilder.class
 dao\SliderDAO.class
@@ -62,6 +66,7 @@ model\Blog$BlogBuilder.class
 Controller\Public\ProductListController.class
 model\SendMailOK.class
 model\Cart$CartBuilder.class
+Controller\Public\CartController.class
 EncodeMD5\MD5.class
 model\Slider.class
 model\User$UserBuilder.class
