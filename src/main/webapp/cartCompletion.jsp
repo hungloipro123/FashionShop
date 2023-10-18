@@ -1,8 +1,3 @@
-<%-- 
-    Document   : cartCompletion
-    Created on : Jun 6, 2022, 11:14:20 PM
-    Author     : Veetu
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
