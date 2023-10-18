@@ -1,8 +1,4 @@
-<%-- 
-    Document   : order-detail
-    Created on : Jun 14, 2022, 7:27:41 PM
-    Author     : Admin
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
