@@ -1,8 +1,4 @@
-<%-- 
-    Document   : BlogDetail
-    Created on : Jun 7, 2022, 5:23:29 PM
-    Author     : Veetu
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
